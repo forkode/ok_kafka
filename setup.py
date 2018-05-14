@@ -10,5 +10,5 @@ setup(
     url='http://gitlab.fewerwords.org/forkard/ok_kafka',
     license='MIT',
     packages=['ok_kafka'],
-    install_requires=['kafka-python'],
+    install_requires=['jinja2', 'kafka-python', 'PyYAML'],
 )

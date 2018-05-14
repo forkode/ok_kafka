@@ -111,7 +111,7 @@ def subscribe(
                 meta_tools.nonthreadsafe_track = None
 
                 handler([
-                   get_message_and_meta(record, deserialize)
+                   get_message_and_meta(record, deserialize, topic)
                    for records in partition_records.values()
                    for record in records
                 ])
@@ -121,7 +121,7 @@ def subscribe(
 
         else:
             for record in consumer:  # type: ConsumerRecord
-                message, meta = get_message_and_meta(record, deserialize)
+                message, meta = get_message_and_meta(record, deserialize, topic)
                 if use_track_magic:
                     meta_tools.nonthreadsafe_track = meta.track
 

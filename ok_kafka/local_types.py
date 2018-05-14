@@ -7,7 +7,7 @@ __all__ = [
 ]
 
 MessageType = TypeVar('MessageType')
-DeserializerType = Callable[[bytes], MessageType]
+DeserializerType = Callable[[bytes, str], MessageType]
 SerializerType = Callable[[MessageType], bytes]
 
 DecoratorType = Callable[[Callable], Callable]

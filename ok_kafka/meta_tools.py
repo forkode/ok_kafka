@@ -59,10 +59,11 @@ def make_meta(
 def get_message_and_meta(
     record,  # type: ConsumerRecord
     deserialize,  # type: DeserializerType
+    topic,  # type: str
 ):
     # type: (...) -> Tuple[MessageType, MessageMeta]
     """Helper method to deserialize data and create meta"""
-    message = deserialize(record.value)
+    message = deserialize(record.value, topic)
     meta = message.pop('_meta', {})
     created_at = datetime.fromtimestamp(record.timestamp / 1000)
 
