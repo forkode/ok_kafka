@@ -102,7 +102,7 @@ class Producer:
         if not _meta:
             _meta = make_meta(issuer=self.issuer)
         self._produce(
-            'test_topic',
+            '{{ topic }}',
             {
                 '_meta': _meta,
                 {%- for property_name, property in message.properties.items() %}
