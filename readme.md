@@ -15,7 +15,7 @@ KAFKA_GROUP - kafka group, group of workers that do the same task
 ```
 
 ## how to use producer
-first you need to create yaml file with topic schemas like this:
+first you need to create an yaml file with topic schemas like this:
 ```yaml
 my.fancy.topic1:  # inside should be json-schema
   type: object
@@ -33,12 +33,12 @@ my.fancy.topic2:
   ...
 ```
 
-then generate producer
+then generate a producer
 ```sh
-cat/curl my_topics | python3 -m ok_kafka.start > ./clients/kafka_producer
+cat/curl my_topics.yaml | python3 -m ok_kafka.start > ./clients/kafka_producer.py
 ```
 
-then just use it
+then use it
 ```python
 from clients.kafka_producer import Producer
 
