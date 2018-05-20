@@ -73,7 +73,7 @@ def subscribe(
     :param kafka_url: to connect to kafka, something like '127.0.0.1:9092'
     :param deserialize: function that deserialize raw 'bytes' message
     :param max_records: if specified handler receives this num of messages
-      (or less if couln't collect this much in timeout)
+      (or less if couln't collect that many in timeout)
     :param timeout: when max_records is given, timeout to collect records
     :param start_from_latest: for new consumer or on offset error.
       if true, consumer will receive messages pushed after first connection
