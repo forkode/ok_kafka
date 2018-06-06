@@ -5,7 +5,7 @@ default serialization/deserialization, minimal topic description or some
 standardized metadata.
 
 ## Start kafka for testing
-`docker run -p 2181:2181 -p 9092:9092 —env ADVERTISED_HOST='127.0.0.1' —env ADVERTISED_PORT=9092 spotify/kafka`
+`docker run -p 2181:2181 -p 9092:9092--env ADVERTISED_HOST='127.0.0.1' --env ADVERTISED_PORT=9092 spotify/kafka`
 
 ## Environment variables
 Should be specified or you can provide the values directly to your 'Producer' and '@subscribe'
