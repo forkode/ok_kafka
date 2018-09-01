@@ -35,6 +35,7 @@ template = Template("""
 {%- endmacro -%}
 
 
+# pylint: skip-file
 \"\"\"Message producer.
 
 usage:
